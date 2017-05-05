@@ -21,7 +21,6 @@ var ScrollLock = createClass({
 		var scrollbarWidth = window.innerWidth - document.body.clientWidth; // 1.
 		var target = document.body;
 
-		target.style.paddingRight = scrollbarWidth + 'px';
 		target.style.overflowY = 'hidden';
 
 		target.addEventListener('touchmove', preventTouchMove, false); // 2.
@@ -37,7 +36,6 @@ var ScrollLock = createClass({
 		var scrollTarget = this.props.scrollTarget;
 		var target = document.body;
 
-		target.style.paddingRight = '';
 		target.style.overflowY = '';
 
 		target.removeEventListener('touchmove', preventTouchMove, false);
